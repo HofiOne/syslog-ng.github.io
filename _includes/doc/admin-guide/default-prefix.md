@@ -3,6 +3,9 @@ the following format:
 
 ```config
 parser {
-    {{page.parser}}-parser(prefix("myprefix."));
+    {{ page.parser }}-parser(
+        ... other options ...
+        prefix("myprefix.")
+    );
 };
 ```
