@@ -767,21 +767,24 @@ $(function () {
   // -------------
 
   if (searchEnabled) {
-    // Close search screen with Esc key or toggle with predefined hotKey
-    $(document).on('keyup', function (event) {
-      // Define the desired hotkey (in this case, Ctrl + Shift + F)
-      var searchHotkey = { ctrlKey: true, shiftKey: true, key: 'F' };
-
+    // Close search panel with Esc key — capture phase so stopPropagation in inner
+    // elements cannot block it
+    document.addEventListener('keyup', function (event) {
       if (event.keyCode === 27) {
         if ($(".initial-content").hasClass("is--hidden"))
           toggleSearch(event);
       }
-      else if (event.ctrlKey === searchHotkey.ctrlKey &&
-        event.shiftKey === searchHotkey.shiftKey &&
-        event.key === searchHotkey.key) {
+    }, true);
+
+    // Toggle search panel with Ctrl+Shift+F — capture phase + preventDefault so the
+    // browser/OS cannot intercept the combination before the page handles it
+    document.addEventListener('keydown', function (event) {
+      if (event.ctrlKey && event.shiftKey &&
+          (event.key.toUpperCase() === 'F' || event.code === 'KeyF')) {
+        event.preventDefault();
         toggleSearch(event);
       }
-    });
+    }, true);
 
     function toggleSearch(event) {
       $(".search-content").toggleClass("is--visible");
