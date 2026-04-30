@@ -794,7 +794,7 @@ $(function () {
       if ($(".initial-content").hasClass("is--hidden")) {
         // set focus on input
         setTimeout(function () {
-          var input = $(".search-content__form").find("input");
+          var input = $(".search-content__form").find("input[type='search']");
           input.trigger("focus");
           input.trigger("select");
         }, 100);
