@@ -1154,7 +1154,7 @@ $(document).ready(function() {
       resultdiv.append(searchitem);
     }
   }
-  $('input#search').on('keyup', onKeyUp);
+  $('input#search').on('input', onKeyUp);
   
   // Function to update fuzzy checkbox state based on exact-only mode
   function updateFuzzyCheckboxState() {
