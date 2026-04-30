@@ -227,8 +227,8 @@ $(function () {
 
       var updated = false;
       // Get the relative URL value and update the browser URL
-      // Use originalTarget or explicitTarget to get the correct one even for clicks from the tooltips
-      var anchorElement = event.originalTarget.closest('a');
+      // Use originalTarget (Firefox) or target (all other browsers) to get the clicked element
+      var anchorElement = (event.originalTarget || event.target).closest('a');
 
       if (anchorElement) {
         var url = new URL(anchorElement.href);
