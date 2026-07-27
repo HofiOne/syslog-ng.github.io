@@ -16,6 +16,9 @@ following points:
     error message when {{ site.product.short_name }} starts, you can try increasing
     the stack size using the mentioned `SYSLOG_NG_CONFIG_MAX_STACK_DEPTH` environment variable.
 
+    If `SYSLOG_NG_CONFIG_MAX_STACK_DEPTH` is set to a value lower than the default (20,000), the setting is ignored and {{ site.product.short_name }} uses the default value instead.
+    {: .notice--primary}
+
     Be cautious when setting a higher value for `SYSLOG_NG_CONFIG_MAX_STACK_DEPTH`, as it increases memory consumption during parsing and potentially at runtime as well (because the increased max stack depth allows larger configuration files, which likely require more memory).
     {: .notice--danger}
 
