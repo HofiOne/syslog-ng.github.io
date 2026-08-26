@@ -47,10 +47,14 @@ ${my-stray-words} for this message will be
 | Synopsis: | pair-separator("\<separator-string\>") |
 
 *Description:* Specifies the character or string that separates the
-key-value pairs from each other. Default value: **,** .
+key-value pairs from each other. Default value: `, ` (comma followed by a space).
 
-For example, to parse key1=value1;key2=value2 pairs, use
-**kv-parser(pair-separator(\";\"));** .
+The **full string** must match at the current position — a prefix match alone is
+not enough. With the default `, `, a bare `,` inside a value is **not** treated
+as a pair separator; only the exact two-character sequence `, ` is. For example,
+`foo=a,b c=d` parses as `foo="a,b"` and `c="d"`.
+
+To parse `key1=value1;key2=value2` pairs, use `kv-parser(pair-separator(";"));`.
 
 {% include doc/admin-guide/options/template-macro.md %}
 
