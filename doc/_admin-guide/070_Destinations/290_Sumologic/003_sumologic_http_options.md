@@ -39,3 +39,5 @@ destination.
 {% include doc/admin-guide/options/time-reopen.md %}
 
 {% include doc/admin-guide/options/tls.md %}
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

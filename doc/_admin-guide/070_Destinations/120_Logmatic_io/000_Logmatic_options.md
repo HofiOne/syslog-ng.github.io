@@ -15,3 +15,5 @@ or TLS-encryption).
 {% include doc/admin-guide/options/hook.md %}
 
 {% include doc/admin-guide/options/token.md %}
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

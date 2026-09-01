@@ -17,3 +17,5 @@ The graylog2() destination has the following options:
 {% include doc/admin-guide/options/tls.md %}
 
 {% include doc/admin-guide/options/destination-transport.md %}
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}
