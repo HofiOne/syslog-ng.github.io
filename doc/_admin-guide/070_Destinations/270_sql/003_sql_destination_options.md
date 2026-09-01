@@ -187,6 +187,8 @@ NULL as well.
 
 {% include doc/admin-guide/options/password.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/port.md %}
 
 ## quote_char()

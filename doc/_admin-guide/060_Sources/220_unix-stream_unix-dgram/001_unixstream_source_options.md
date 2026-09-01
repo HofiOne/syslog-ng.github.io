@@ -69,6 +69,8 @@ Cannot be used with unix-dgram().
 
 {% include doc/admin-guide/options/perm.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/program-override.md %}
 
 {% include doc/admin-guide/options/sdata-prefix.md %}

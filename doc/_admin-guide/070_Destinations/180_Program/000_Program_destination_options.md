@@ -29,6 +29,8 @@ The program() destination has the following options:
 
 {% include doc/admin-guide/options/mark-mode.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/suppress.md %}
 
 {% include doc/admin-guide/options/template-logformat.md %}

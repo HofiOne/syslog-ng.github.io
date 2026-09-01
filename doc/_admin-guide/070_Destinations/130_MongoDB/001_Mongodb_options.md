@@ -79,6 +79,8 @@ operation times out, {{ site.product.short_name }} assumes the operation has fai
 *Description:* Refer to the [MongoDB URI format documentation]
 (https://docs.mongodb.com/manual/reference/connection-string/) for detailed syntax.
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/value-pairs-short.md %}
 
 {% include doc/admin-guide/options/workers.md %}

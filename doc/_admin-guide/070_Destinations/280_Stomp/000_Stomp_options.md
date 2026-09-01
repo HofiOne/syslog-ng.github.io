@@ -54,6 +54,8 @@ server. It can include macros and templates.
 
 {% include doc/admin-guide/options/password.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/persistent.md %}
 
 {% include doc/admin-guide/options/port.md %}

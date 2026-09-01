@@ -87,6 +87,8 @@ This option is a required parameter when using the SNMPv3 protocol.
 
 {% include doc/admin-guide/options/log-fifo-size.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/port.md %}
 
 ## snmp-obj()

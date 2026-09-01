@@ -92,6 +92,8 @@ The syslog-ng-otlp() and opentelemetry() sources ignore this option and use the 
 
 {% include doc/admin-guide/options/normalize-hostnames.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/port.md %}
 
 {% include doc/admin-guide/options/sdata-prefix.md %}

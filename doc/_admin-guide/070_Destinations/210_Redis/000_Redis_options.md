@@ -54,6 +54,8 @@ Note the following points when using the redis() destination:
 
 {% include doc/admin-guide/options/host.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/port.md %}
 
 {% include doc/admin-guide/options/retries.md %}

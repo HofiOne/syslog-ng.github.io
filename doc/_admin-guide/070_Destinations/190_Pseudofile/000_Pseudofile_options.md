@@ -17,6 +17,8 @@ The pseudofile() destination has the following options:
 
 {% include doc/admin-guide/options/hook.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/template-logformat.md %}
 
 {% include doc/admin-guide/options/time-reopen.md %}

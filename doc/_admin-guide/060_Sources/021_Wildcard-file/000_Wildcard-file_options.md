@@ -186,6 +186,8 @@ To force {{ site.product.short_name }} to poll the file changes even if `inotify
 
 {% include doc/admin-guide/options/pad-size.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/program-override.md %}
 
 ## recursive()

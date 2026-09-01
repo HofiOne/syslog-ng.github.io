@@ -68,6 +68,8 @@ The `darwin-oslog()` source has the following options.
 
 {% include doc/admin-guide/options/normalize-hostnames.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/program-override.md %}
 
 {% include doc/admin-guide/options/read-old-records.md %}
