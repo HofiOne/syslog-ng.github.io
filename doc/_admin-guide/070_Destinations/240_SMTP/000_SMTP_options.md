@@ -115,6 +115,8 @@ When using the header option, note the following points:
 
 {% include doc/admin-guide/options/log-fifo-size.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/port.md %}
 
 ## reply-to()

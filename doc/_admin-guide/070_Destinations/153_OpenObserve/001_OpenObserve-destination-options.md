@@ -44,3 +44,5 @@ description: >-
 | Type:    | string |
 | Default: |        |
 
+{% include doc/admin-guide/options/scl-block-additional-options.md %}
+

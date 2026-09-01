@@ -131,6 +131,8 @@ namespaces on the Systemd side, see Journal Namespaces.
 
 {% include doc/admin-guide/options/normalize-hostnames.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 ## prefix()
 
 | Type:    | string     |

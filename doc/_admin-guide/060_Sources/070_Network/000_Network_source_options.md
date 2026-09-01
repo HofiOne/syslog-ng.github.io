@@ -69,6 +69,8 @@ Available in 3.19 and later.
 
 {% include doc/admin-guide/options/pad-size.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/port-localport.md %}
 
 {% include doc/admin-guide/options/program-override.md %}

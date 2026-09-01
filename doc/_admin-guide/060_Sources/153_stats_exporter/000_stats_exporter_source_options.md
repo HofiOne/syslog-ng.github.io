@@ -78,3 +78,5 @@ The available formats are the following:
 | Default:         | `no`        |
 
 *Description:* If this option is set to `yes`, the output of a `stats` type request — only when using the `prometheus` format — will not include legacy counters, similar to the `with-legacy-metrics` option available in `syslog-ng-ctl`.
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

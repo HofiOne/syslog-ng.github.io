@@ -32,6 +32,8 @@ description: >-
 
 {% include doc/admin-guide/options/pad-size.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 ## program()
 
 | Type:    | filename with path |

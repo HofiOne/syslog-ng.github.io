@@ -19,3 +19,5 @@ or TLS-encryption).
 {% include doc/admin-guide/options/token.md %}
 
 {% include doc/admin-guide/options/destination-transport.md %}
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

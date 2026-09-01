@@ -143,6 +143,8 @@ above that size will be lost.
 
 {% include doc/admin-guide/options/perm.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/suppress.md %}
 
 ## symlink-as()

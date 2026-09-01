@@ -31,3 +31,5 @@ For details on using the payload() option, see graphite-output.
 
 If left empty, there is no data to be forwarded to Graphite.
 {: .notice--primary}
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

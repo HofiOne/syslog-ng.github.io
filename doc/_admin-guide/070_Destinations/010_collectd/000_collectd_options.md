@@ -115,3 +115,5 @@ For example:
 ```config
 values("${SEQNUM}"),
 ```
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

@@ -84,3 +84,5 @@ source receives RFC-3164 formatted (BSD-syslog) messages.
 source receives RFC-3164 formatted (BSD-syslog) messages
 
 {% include doc/admin-guide/options/use-syslogng-pid.md %}
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

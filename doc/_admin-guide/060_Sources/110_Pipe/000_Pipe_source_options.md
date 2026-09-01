@@ -50,6 +50,8 @@ The pipe driver has the following options:
 
 {% include doc/admin-guide/options/pad-size.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/program-override.md %}
 
 {% include doc/admin-guide/options/sdata-prefix.md %}

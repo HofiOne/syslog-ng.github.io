@@ -35,3 +35,5 @@ the interface between osquery and syslog-ng. (The default path is set in
 the SCL file.)
 
 Specifying this option is optional.
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

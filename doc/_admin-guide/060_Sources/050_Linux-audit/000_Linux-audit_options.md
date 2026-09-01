@@ -28,3 +28,5 @@ The linux-audit() driver has the following options:
 {% include doc/admin-guide/options/sdata-prefix.md %}
 
 {% include doc/admin-guide/options/use-syslogng-pid.md %}
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}

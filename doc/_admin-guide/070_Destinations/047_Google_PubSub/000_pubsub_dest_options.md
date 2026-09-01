@@ -41,6 +41,8 @@ See the example for `auth()` above.
 
 *Description:* The template used as the data element of the Google Pub/Sub message.
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 ## project()
 
 | Type:    | string/template |

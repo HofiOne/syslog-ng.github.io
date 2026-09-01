@@ -140,6 +140,8 @@ described in the AMQP Reference Guide).
 
 {% include doc/admin-guide/options/peer-verify.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/tls-block.md %}
 
 {% include doc/admin-guide/examples/amqp.md %}

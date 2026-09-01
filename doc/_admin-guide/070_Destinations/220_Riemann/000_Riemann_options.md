@@ -133,6 +133,8 @@ following example specifies the ${SEQNUM} macro as an integer.
 metric(int("${SEQNUM}"))
 ```
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/port.md %}
 
 {% include doc/admin-guide/options/retries.md %}

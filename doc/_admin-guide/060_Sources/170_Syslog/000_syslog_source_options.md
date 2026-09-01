@@ -70,6 +70,8 @@ Available in {{ site.product.short_name }} 3.19 and later versions.
 
 {% include doc/admin-guide/options/pad-size.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/port-localport.md %}
 
 {% include doc/admin-guide/options/program-override.md %}

@@ -140,6 +140,8 @@ The timestamp types are the following.
 
 *Description:* This option specifies the URL of the Loki endpoint.
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/worker-partition-key.md %}
 
 {% include doc/admin-guide/options/workers.md %}

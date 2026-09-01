@@ -34,6 +34,8 @@ the following options:
 
 {% include doc/admin-guide/options/mark-mode.md %}
 
+{% include doc/admin-guide/options/persist-name.md %}
+
 {% include doc/admin-guide/options/so-broadcast.md %}
 
 {% include doc/admin-guide/options/so-keepalive.md %}

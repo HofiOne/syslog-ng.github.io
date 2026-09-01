@@ -82,3 +82,5 @@ the url-encode() template function.
 {% include doc/admin-guide/options/time-reopen.md %}
 
 {% include doc/admin-guide/options/throttle.md %}
+
+{% include doc/admin-guide/options/scl-block-additional-options.md %}
