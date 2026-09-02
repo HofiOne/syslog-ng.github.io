@@ -75,6 +75,23 @@ If you are running {{ site.product.short_name }} on a dedicated host (always rec
 
 Available in {{ site.product.short_name }} 4.0 and later.
 
+### remove-if-empty()
+
+| Accepted values: | `yes`, `no` |
+| Default:         | `no`        |
+
+*Description:* If set to yes, {{ site.product.short_name }} removes the disk-buffer file and its persist entry when
+the destination that owns the disk-buffer is torn down by time-reap() and the disk-buffer contains no messages.
+Disk-buffer files that contain messages are always preserved.
+
+This option is useful for templated destinations whose expansions do not recur, such as file paths that contain
+receive-time date macros. Without this option, every new expansion can leave an empty disk-buffer file behind after
+the destination is reaped.
+
+Do not enable this option when reaped destination expansions are expected to recur. Keeping the default value allows
+such destinations to reuse their existing disk-buffer files.
+{: .notice--warning}
+
 ### reliable()
 
 | Accepted values: | `yes`, `no` |
