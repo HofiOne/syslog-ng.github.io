@@ -340,6 +340,70 @@ driver.
 information (that is, the `PID`, user ID, and group of the sender process)
 for messages received using UNIX domain sockets.
 
+## stack-alloc-limit()
+
+| Accepted values: | number (bytes) |
+| Default:         | `0`            |
+
+*Description:* Sets an upper limit, in bytes, up to which {{ site.product.short_name }}
+is allowed to use a fast, temporary stack allocation instead of a heap
+allocation, at internal decision points where the size of the buffer
+needed is derived from a configurable option (for example,
+log-msg-size()) rather than a fixed constant. If the buffer size
+actually needed at such a decision point is less than or equal to
+stack-alloc-limit(), the allocation happens on the stack; otherwise, and
+always when stack-alloc-limit() is `0` (the default), it is allocated on
+the heap.
+
+Consider the following trade-offs before changing this from the default:
+
+- **Security risk:** raising this value reintroduces a class of
+    stack-exhaustion risk that the heap-only default (`0`) is specifically
+    designed to eliminate. If stack-alloc-limit() is set higher than what a
+    thread's actual stack size can safely accommodate, {{ site.product.short_name }}
+    can crash (denial of service) in the code paths governed by this
+    option — this is exactly the failure mode the default protects
+    against. Safe stack capacity depends on your platform, OS thread defaults, and
+    any `ulimit`/`LimitSTACK=` restrictions, none of which
+    {{ site.product.short_name }} can detect or enforce on your behalf.
+
+- **Memory allocation:** with the default (`0`), the heap allocation
+    used at a given decision point may be held for longer than a single
+    call — for example, in the case of the current encoding() conversion
+    buffer, it is allocated once and reused for the lifetime of the
+    connection that owns it, rather than being freed right after use.
+    This is a real memory cost that a purely stack-based approach would
+    not have, and it can add up at scale: 10,000 concurrent connections
+    with the default log-msg-size(65536) (64 KiB) hold roughly 625 MiB in
+    total in that specific case, for as long as those connections stay
+    open. Raising stack-alloc-limit() lets the cases whose needed buffer
+    size fits within the limit use a transient stack allocation instead,
+    reclaimed immediately after use and adding nothing to any persistent
+    memory footprint — at the cost of the security risk described above.
+
+- **Speed:** this is the reason stack-alloc-limit() exists at all. Once
+    you have validated that your deployment's stack can safely
+    accommodate it (see the security risk above), choosing the stack
+    path over the heap path avoids any heap allocation or heap-management
+    overhead for that call, which is a genuine can be a speed improvement
+    over the default. How large that improvement is depends on how the
+    specific decision point implements its heap fallback: a simple, grow-once
+    buffer (like the current encoding() conversion buffer) already has
+    low steady-state overhead, so the improvement there is small; a heap
+    fallback that shares a resource pool with unrelated allocations (for
+    example, a scratch-buffer-based implementation) can have real, less
+    predictable overhead, so the improvement there can be larger. Either
+    way, only enable this for the speed benefit after you have already
+    validated the stack-safety trade-off above — do not enable it for
+    speed alone without that validation.
+
+Only raise stack-alloc-limit() above `0` if you have measured your
+deployment's actual thread stack size (including any container or
+`systemd` `LimitSTACK=` restriction) and are certain that
+stack-alloc-limit() plus the rest of your call stack's usage stays safely
+within it. When in doubt, leave this at the default.
+{: .notice--danger}
+
 ## stats()
 
 Available in {{ site.product.short_name }} 4.1 and later versions.
